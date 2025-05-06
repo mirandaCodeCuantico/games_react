@@ -1,6 +1,5 @@
-//import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Cuadro-Game/image_selector.css"; // crea un estilo espacial como el resto
+import "../Cuadro-Game/image_selector.css"; 
 
 const imagenes = [
   'images/batman.webp',

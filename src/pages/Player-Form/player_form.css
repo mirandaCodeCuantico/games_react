@@ -16,7 +16,6 @@ body {
   overflow: hidden;
 }
 
-/* Fondo de estrellas */
 .stars {
   position: absolute;
   top: 0;
@@ -33,7 +32,6 @@ body {
   100% { background-position: 100% 100%; }
 }
 
-/* Estilo del formulario */
 .player-form {
   position: relative;
   z-index: 2;

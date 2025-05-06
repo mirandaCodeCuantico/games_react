@@ -10,7 +10,7 @@ function PlanetButton({ route, text, planetColor, delay, radius }) {
 
   const buttonStyle = {
     backgroundColor: planetColor,
-    transform: `translateX(${radius}px)`, // posiciona el planeta sobre la órbita
+    transform: `translateX(${radius}px)`,
   };
 
   return (

@@ -6,7 +6,6 @@ body {
   overflow: hidden;
 }
 
-/* Fondo de espacio */
 .nebula-container {
   position: relative;
   text-align: center;
@@ -22,14 +21,12 @@ body {
   align-items: center;
 }
 
-/* Animación de nebulosa para el fondo */
 @keyframes nebulaGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Efecto de estrellas en el fondo */
 .stars {
   position: absolute;
   top: 0;
@@ -46,7 +43,6 @@ body {
   100% { background-position: 100% 100%; }
 }
 
-/* Título */
 .nebula-title {
   font-size: 3rem;
   color: #f0f0f0;
@@ -54,7 +50,6 @@ body {
   margin-bottom: 50px;
 }
 
-/* Contenedor de los planetas y el sol */
 .orbit-container {
   position: relative;
   width: 100%;
@@ -64,7 +59,6 @@ body {
   align-items: center;
 }
 
-/* Sol en el centro */
 .sun {
   width: 120px;
   height: 120px;
@@ -75,7 +69,6 @@ body {
   z-index: 10;
 }
 
-/* Animación de planetas orbitando */
 .orbit {
   position: absolute;
   width: 300px;
@@ -83,7 +76,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: orbitAnimation 6s linear infinite; /* Más rápido */
+  animation: orbitAnimation 6s linear infinite; 
 }
 
 @keyframes orbitAnimation {
@@ -91,7 +84,6 @@ body {
   100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
-/* Estilo de los planetas */
 .planet-button {
   display: block;
   width: 60px;

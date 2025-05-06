@@ -26,20 +26,19 @@ export default function MemoryGame() {
     const [matchedCards, setMatchedCards] = useState([]);
     const [score, setScore] = useState(0);
     const [attempts, setAttempts] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(60); // Tiempo del juego en segundos
+    const [timeLeft, setTimeLeft] = useState(60); 
     const [gameOver, setGameOver] = useState(false);
-    const [theme, setTheme] = useState(localStorage.getItem("selectedTheme") || themes[0]); // Tema de las cartas
+    const [theme, setTheme] = useState(localStorage.getItem("selectedTheme") || themes[0]);
   
-    // Barajar las cartas y asignar imágenes a las cartas
     const shuffleCards = () => {
-      let shuffledCards = [...images, ...images]; // Duplicar las imágenes
+      let shuffledCards = [...images, ...images]; 
       shuffledCards = shuffledCards.map((img, index) => ({
         id: index,
         image: img,
         isFlipped: false,
         isMatched: false,
       }));
-      shuffledCards = shuffledCards.sort(() => Math.random() - 0.5); // Barajar
+      shuffledCards = shuffledCards.sort(() => Math.random() - 0.5); 
       setCards(shuffledCards);
     };
   
@@ -47,7 +46,7 @@ export default function MemoryGame() {
       if (timeLeft === 0) {
         setGameOver(true);
         const playerName = localStorage.getItem("playerName") || "Invitado";
-        saveScore("memoria", playerName, attempts, score); // Guardamos intentos y puntuación
+        saveScore("memoria", playerName, attempts, score); 
         return;
       }
   
@@ -56,7 +55,7 @@ export default function MemoryGame() {
     }, [attempts, score, timeLeft]);
   
     useEffect(() => {
-      shuffleCards(); // Barajar las cartas al iniciar el juego
+      shuffleCards(); 
     }, []);
   
     const handleCardClick = (card) => {
@@ -71,15 +70,13 @@ export default function MemoryGame() {
       if (flippedCards.length === 1) {
         const [firstCard] = flippedCards;
         if (firstCard.image === card.image) {
-          // Emparejamos las cartas
           const matched = [...matchedCards, firstCard, card];
           setMatchedCards(matched);
-          setScore(score + 1); // Aumentamos el puntaje
-          setFlippedCards([]); // Limpiamos las cartas volteadas
+          setScore(score + 1); 
+          setFlippedCards([]); 
         } else {
-          setAttempts(attempts + 1); // Aumentamos los intentos
+          setAttempts(attempts + 1); 
           setTimeout(() => {
-            // Volvemos a poner las cartas boca abajo después de 1 segundo
             const resetCards = [...cards];
             resetCards[index].isFlipped = false;
             const firstIndex = updatedCards.findIndex(c => c.id === firstCard.id);

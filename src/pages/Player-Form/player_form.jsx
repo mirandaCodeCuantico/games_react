@@ -30,7 +30,7 @@ function PlayerForm() {
           value={playerName}
           onChange={(e) => {
             setPlayerName(e.target.value);
-            if (error) setError(""); // Limpiar error al escribir
+            if (error) setError("");
           }}
           placeholder="Nombre del jugador"
         />

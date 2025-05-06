@@ -1,4 +1,3 @@
-/* Contenedor de los planetas orbitando alrededor del sol */
 .orbit {
   position: absolute;
   width: 300px; 
@@ -9,13 +8,11 @@
   animation: orbitAnimation 10s linear infinite;
 }
 
-/* Animación de los planetas orbitando alrededor del sol */
 @keyframes orbitAnimation {
   0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
   100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
-/* Estilos para cada botón de planeta */
 .planet-button {
   display: block;
   width: 60px;
