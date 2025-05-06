@@ -1,0 +1,75 @@
+/* Fondo general */
+.ranking-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #0f0f3a, #000010);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+  
+  /* Título principal */
+.ranking-title {
+    font-size: 2.5rem;
+    color: #67e8f9;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 8px cyan;
+}
+  
+  /* Contenedor de secciones */
+.ranking-sections {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+  
+  /* Tarjeta individual */
+.ranking-card {
+    background-color: #1b263b;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid #67e8f9;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+}
+  
+  /* Encabezados específicos */
+.ranking-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+  
+.ranking-header.cuadro {
+    color: #f472b6;
+}
+  
+.ranking-header.memoria {
+    color: #facc15;
+}
+  
+.ranking-header.culebrita {
+    color: #34d399;
+}
+  
+  /* Botón */
+.ranking-footer {
+    margin-top: 2rem;
+}
+  
+.back-button {
+    background-color: #22d3ee;
+    color: black;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+  
+.back-button:hover {
+    background-color: #06b6d4;
+    transform: scale(1.05);
+}

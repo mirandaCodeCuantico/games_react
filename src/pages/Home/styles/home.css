@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+/* Fondo de espacio */
+.nebula-container {
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(13, 12, 26, 1) 50%, rgba(23, 19, 45, 1) 100%);
+  background-size: cover;
+  animation: nebulaGradient 20s ease infinite;
+  box-shadow: inset 0 0 80px #000000aa;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animación de nebulosa para el fondo */
+@keyframes nebulaGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efecto de estrellas en el fondo */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/space.png') repeat;
+  pointer-events: none;
+  animation: starAnimation 100s linear infinite;
+}
+
+@keyframes starAnimation {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Título */
+.nebula-title {
+  font-size: 3rem;
+  color: #f0f0f0;
+  text-shadow: 0 0 10px #4c4cff, 0 0 20px #9418fd;
+  margin-bottom: 50px;
+}
+
+/* Contenedor de los planetas y el sol */
+.orbit-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sol en el centro */
+.sun {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ffdd33;
+  box-shadow: 0 0 40px rgba(255, 221, 51, 0.7);
+  position: absolute;
+  z-index: 10;
+}
+
+/* Animación de planetas orbitando */
+.orbit {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbitAnimation 6s linear infinite; /* Más rápido */
+}
+
+@keyframes orbitAnimation {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/* Estilo de los planetas */
+.planet-button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.planet-button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.player-name {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: rgba(25, 25, 112, 0.4);
+  padding: 8px 14px;
+  border: 2px solid #4c4cff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #4c4cff;
+  z-index: 100;
+  text-shadow: 0 0 5px #4c4cff;
+}

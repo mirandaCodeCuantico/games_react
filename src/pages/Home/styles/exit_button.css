@@ -1,0 +1,23 @@
+/* Agrega el estilo para el botón de salida */
+.exit-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #1c1c3c;
+    color: #ffffff;
+    border: 2px solid #4c4cff;
+    padding: 10px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 0 10px #4c4cff;
+    transition: all 0.3s ease;
+}
+
+.exit-button:hover {
+    background: #4c4cff;
+    color: black;
+    box-shadow: 0 0 20px #a18fff;
+}

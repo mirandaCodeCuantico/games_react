@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+.nebula-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0d0d1a, #000);
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/space.png") repeat;
+  animation: moveStars 100s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}
+
+.game-ui {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  background-color: rgba(0, 0, 30, 0.6);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #38a1db;
+}
+
+.score, .timer {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.game-image {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #ff9f00;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+
+.game-image:hover {
+  transform: scale(1.1);
+}
+
+.end-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(20, 20, 40, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ff9f00;
+}
+
+.end-screen h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff9f00;
+}
+
+.end-screen p {
+  font-size: 1.5rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #4c4cff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #6a6aff;
+}

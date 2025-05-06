@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+.image-selector-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: radial-gradient(circle at center, #0d0d1a, #000);
+  animation: nebulaGradient 20s ease infinite;
+  font-family: 'Orbitron', sans-serif;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/space.png") repeat;
+  animation: starAnimation 100s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes starAnimation {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes nebulaGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.image-selector-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #4c4cff, 0 0 20px #9418fd;
+  z-index: 1;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  z-index: 1;
+  padding: 20px;
+}
+
+.image-item {
+  border: 3px solid transparent;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.image-item:hover {
+  transform: scale(1.1);
+  border-color: #38a1db;
+  box-shadow: 0 0 20px rgba(56, 161, 219, 0.5);
+}
+
+.image-item.selected {
+  border-color: #ff9f00;
+  box-shadow: 0 0 25px #ff9f00aa;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #4c4cff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #6a6aff;
+  transform: scale(1.05);
+}
+
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: radial-gradient(circle, #000 0%, #1a1a40 100%);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.selector-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #4c4cff;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.image-option {
+  width: 100%;
+  max-width: 120px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 2px solid #444;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.image-option:hover {
+  transform: scale(1.1);
+  border-color: #6f6fff;
+  box-shadow: 0 0 10px #6f6fff88;
+}

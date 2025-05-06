@@ -1,0 +1,59 @@
+/* Contenedor de los planetas orbitando alrededor del sol */
+.orbit {
+  position: absolute;
+  width: 300px; 
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbitAnimation 10s linear infinite;
+}
+
+/* Animación de los planetas orbitando alrededor del sol */
+@keyframes orbitAnimation {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/* Estilos para cada botón de planeta */
+.planet-button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.planet-button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.ranking-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.ranking-button {
+  background-color: #00ffff;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ranking-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
