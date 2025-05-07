@@ -74,7 +74,7 @@ export default function Snake() {
 
         return newSnake;
       });
-    }, 150);
+    }, 150);  
 
     return () => clearInterval(interval);
   }, [direction, food, gameOver, saveRanking, attemptsLeft, resetTrigger]);

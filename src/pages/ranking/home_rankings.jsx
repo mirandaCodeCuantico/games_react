@@ -13,7 +13,7 @@ export default function RankingPage() {
   useEffect(() => {
     setCuadroRanking(getTopScores("cuadro"));
     setMemoriaRanking(getTopScores("memoria"));
-    setCulebritaRanking(getTopScores("culebrita"));
+    setCulebritaRanking(getTopScores("ranking-culebrita"));
   }, []);
 
   return (
