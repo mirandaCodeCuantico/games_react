@@ -13,7 +13,7 @@ export default function CuadroGame() {
   useEffect(() => {
     if (timeLeft === 0) {
       setGameOver(true);
-      const playerName = localStorage.getItem("playerName") || "Invitado";
+      const playerName = localStorage.getItem("playerName");
       saveScore("cuadro", playerName, score);
       return;
     }
