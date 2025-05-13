@@ -15,3 +15,4 @@ export function getTopScores(gameId) {
   const data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; 
   return data[gameId] || []; 
 }
+
